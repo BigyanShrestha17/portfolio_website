@@ -554,9 +554,9 @@ ul {
 
 /* Footer */
 footer {
-    padding: 80px 0 20px;
+    padding: 0 0 20px;
     text-align: center;
-    border-top: 1px solid var(--card-color);
+    border-top: none;
 }
 
 /* Contact Text */
@@ -595,8 +595,8 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 40px;
-    padding-top: 20px;
+    margin-top: 0;
+    padding: 20px 10% 0;
     border-top: 1px solid var(--card-color);
 }
 
@@ -604,6 +604,32 @@ footer {
     color: var(--text-secondary);
     font-size: 1.5rem;
     transition: var(--transition);
+    position: relative;
+}
+
+.footer-socials a::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 140%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--card-color);
+    color: var(--text-primary);
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: var(--transition);
+    border: 1px solid var(--accent-color);
+    visibility: hidden;
+}
+
+.footer-socials a:hover::after {
+    opacity: 1;
+    visibility: visible;
+    bottom: 130%;
 }
 
 .footer-socials a:hover {
