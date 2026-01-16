@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bigyan | Mobile App Developer</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Rubik:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">BIGYAN.</div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2 class="sub-headline">Hello, World!</h2>
+            <h1 class="headline">I'M <span class="accent-text">BIGYAN</span></h1>
+            <p class="role">MOBILE APP DEVELOPER</p>
+
+            <div class="social-icons">
+                <a href="#" class="social-link" data-tooltip="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="#" class="social-link" data-tooltip="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" class="social-link" data-tooltip="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#" class="social-link" data-tooltip="Email"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+            <a href="#projects" class="btn primary-btn">View My Projects</a>
+        </div>
+        <div class="hero-image">
+            <img src="images/home-right.png" alt="Bigyan - Mobile Developer" onerror="this.style.display='none'">
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I'm a passionate Mobile App Developer dedicated to crafting seamless and intuitive user
+                        experiences. With a strong foundation in both design and development, I bridge the gap between
+                        aesthetics and
+                        functionality.
+                    </p>
+                    <p>
+                        My journey involves solving complex problems with clean code and modern technologies.
+                        I am constantly learning and evolving to stay ahead in the tech landscape.
+                    </p>
+                </div>
+                <div class="about-image">
+                    <img src="images/profile.png" alt="Profile Picture"
+                        onerror="this.src='https://placehold.co/250x250/424769/ffffff?text=Profile'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section education">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="timeline">
+                <!-- High School -->
+                <div class="timeline-item">
+                    <span class="timeline-date">2024 - 2026</span>
+                    <h2>High School Degree</h2>
+                    <h4 class="institute">V.S. Niketan High School</h4>
+                    <p class="location">Kathmandu, Nepal</p>
+                </div>
+                <!-- Bachelor's -->
+                <div class="timeline-item">
+                    <span class="timeline-date">2026 - 2030</span>
+                    <h2>Bachelor's Degree</h2>
+                    <h4 class="institute">University Name</h4>
+                    <p class="location">Helsinki, Finland</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills">
+        <div class="container">
+            <h2 class="section-title">My Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fa-brands fa-html5"></i>
+                    <span class="skill-text">HTML</span>
+                </div>
+                <div class="skill-card">
+                    <i class="fa-brands fa-css3-alt"></i>
+                    <span class="skill-text">CSS</span>
+                </div>
+                <div class="skill-card">
+                    <i class="fa-brands fa-js"></i>
+                    <span class="skill-text">JavaScript</span>
+                </div>
+                <div class="skill-card">
+                    <i class="fa-brands fa-python"></i>
+                    <span class="skill-text">Python</span>
+                </div>
+                <div class="skill-card">
+                    <img src="images/django.png" alt="Django" class="custom-icon">
+                    <span class="skill-text">Django</span>
+                </div>
+                <div class="skill-card">
+                    <img src="images/flutter.png" alt="Flutter" class="custom-icon">
+                    <span class="skill-text">Flutter</span>
+                </div>
+                <div class="skill-card">
+                    <i class="fa-brands fa-git"></i>
+                    <span class="skill-text">Git</span>
+                </div>
+                <div class="skill-card">
+                    <i class="fa-brands fa-docker"></i>
+                    <span class="skill-text">Docker</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects">
+        <div class="container">
+            <h2 class="section-title">My Projects</h2>
+
+            <div class="projects-grid">
+
+                <!-- Project 1 -->
+                <div class="project">
+                    <div class="project-image">
+                        <img src="images/task.jpg" alt="Task Manager App">
+
+                        <div class="project-overlay">
+                            <a href="https://your-live-demo-link.netlify.app" target="_blank"
+                                class="project-overlay-btn">
+                                Live Demo
+                            </a>
+
+                            <a href="https://github.com/yourusername/project1" target="_blank"
+                                class="project-overlay-btn outline">
+                                &lt;/&gt; View Code
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-text">
+                        <h3>Task Manager App</h3>
+                        <p>A simple and intuitive task management mobile app.</p>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project">
+                    <div class="project-image">
+                        <img src="images/project2.png" alt="Portfolio Website">
+
+                        <div class="project-overlay">
+                            <a href="https://your-portfolio-demo.netlify.app" target="_blank"
+                                class="project-overlay-btn">
+                                Live Demo
+                            </a>
+
+                            <a href="https://github.com/yourusername/project2" target="_blank"
+                                class="project-overlay-btn outline">
+                                &lt;/&gt; View Code
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-text">
+                        <h3>Portfolio Website</h3>
+                        <p>A personal portfolio showcasing projects and skills.</p>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project">
+                    <div class="project-image">
+                        <img src="images/project3.png" alt="Weather App">
+
+                        <div class="project-overlay">
+                            <a href="https://your-weather-demo.netlify.app" target="_blank" class="project-overlay-btn">
+                                Live Demo
+                            </a>
+
+                            <a href="https://github.com/yourusername/project3" target="_blank"
+                                class="project-overlay-btn outline">
+                                &lt;/&gt; View Code
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-text">
+                        <h3>Weather App</h3>
+                        <p>Real-time weather app using OpenWeather API.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Footer -->
+    <footer id="contact">
+        <div class="footer-content">
+            <h2>Let's Work Together</h2>
+            <p>Have a project in mind? Feel free to reach out.</p>
+            <a href="mailto:contact@bigyan.com" class="btn secondary-btn">Say Hello</a>
+
+            <div class="copyright">
+                <p>&copy; 2026 Bigyan Shrestha. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
