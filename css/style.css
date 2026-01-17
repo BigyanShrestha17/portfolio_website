@@ -31,7 +31,11 @@ body.light-mode {
 }
 
 /* Base */
-html,
+html {
+    scroll-behavior: smooth;
+    width: 100%;
+}
+
 body {
     overflow-x: hidden;
     width: 100%;
@@ -45,6 +49,11 @@ body {
     font-family: var(--font-body);
     line-height: 1.6;
     transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 a {
@@ -855,11 +864,18 @@ footer {
     }
 
     .headline {
-        font-size: 2.2rem;
+        font-size: 2.8rem;
+        margin-bottom: 20px;
     }
 
     .sub-headline {
-        font-size: 1rem;
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+    }
+
+    .role {
+        font-size: 0.9rem;
+        letter-spacing: 1px;
     }
 
     .project-image img {

@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const revealObserver = new IntersectionObserver(revealCallback, {
-        threshold: 0.15 // Trigger when 15% of element is visible
+        threshold: 0.05 // Trigger when 5% of element is visible
     });
 
     const revealElements = document.querySelectorAll('.reveal');
