@@ -136,6 +136,12 @@ ul {
     color: var(--accent-color);
 }
 
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
 .navbar nav ul {
     display: flex;
     gap: 30px;
@@ -156,7 +162,7 @@ ul {
     background: transparent;
     border: none;
     color: var(--text-primary);
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     cursor: pointer;
     padding: 5px;
     display: flex;
