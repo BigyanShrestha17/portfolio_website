@@ -275,6 +275,17 @@ ul {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
+.about-quote {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    font-style: italic;
+    color: var(--accent-color);
+    border-left: 4px solid var(--accent-color);
+    padding-left: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 @media (max-width: 768px) {
     .about-content {
         flex-direction: column;
