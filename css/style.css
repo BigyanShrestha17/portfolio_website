@@ -186,7 +186,8 @@ body.light-mode .theme-btn .fa-sun {
 /* Hero */
 .hero {
     min-height: 100vh;
-    padding: 80px 10%;
+    padding: 80px 5% 80px 10%;
+    /* 10% left, 5% right */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -223,8 +224,28 @@ body.light-mode .theme-btn .fa-sun {
 
 .sub-headline {
     color: var(--accent-color);
-    font-family: var(--font-heading);
-    margin-bottom: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.typing-cursor {
+    border-right: 3px solid var(--accent-color);
+    padding-right: 3px;
+    animation: blink 0.75s step-end infinite;
+}
+
+@keyframes blink {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: var(--accent-color)
+    }
 }
 
 .headline {
@@ -241,6 +262,10 @@ body.light-mode .theme-btn .fa-sun {
     color: var(--text-secondary);
     letter-spacing: 2px;
     margin-bottom: 30px;
+}
+
+.hero-image {
+    margin-right: -40px;
 }
 
 .hero-image img {

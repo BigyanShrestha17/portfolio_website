@@ -38,7 +38,38 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Special handling for Hero section to ensure it plays immediately
+    // Typewriter Effect Logic
+    const typingSpan = document.getElementById('typing-span');
+    const textToType = "World!";
+    let isDeleting = false;
+    let textIndex = 0;
+    let typeSpeed = 150;
+
+    function type() {
+        const currentText = textToType.substring(0, textIndex);
+        typingSpan.textContent = currentText;
+
+        if (!isDeleting && textIndex < textToType.length) {
+            textIndex++;
+            typeSpeed = 150;
+        } else if (isDeleting && textIndex > 0) {
+            textIndex--;
+            typeSpeed = 100;
+        } else if (!isDeleting && textIndex === textToType.length) {
+            isDeleting = true;
+            typeSpeed = 2000; // Wait before deleting
+        } else if (isDeleting && textIndex === 0) {
+            isDeleting = false;
+            typeSpeed = 500; // Wait before starting again
+        }
+
+        setTimeout(type, typeSpeed);
+    }
+
+    // Start typing after a short delay
+    setTimeout(type, 1000);
+
+    // Special handling for Hero section animations
     setTimeout(() => {
         const heroElements = document.querySelectorAll('.hero .reveal');
         heroElements.forEach(el => el.classList.add('active'));
