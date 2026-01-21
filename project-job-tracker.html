@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Tracker - Bigyan's Portfolio</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Rubik:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="project-detail-page">
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo"><a href="index.html">BIGYAN.</a></div>
+        <div class="navbar-right">
+            <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">
+                <i class="fa-solid fa-moon"></i>
+                <i class="fa-solid fa-sun"></i>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#projects">Projects</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Project Detail Content -->
+    <main class="project-detail-main">
+        <div class="container">
+            <!-- Back Button -->
+            <a href="index.html#projects" class="back-link"><i class="fa-solid fa-arrow-left"></i> Back to Projects</a>
+
+            <!-- Top Section: Image + Details -->
+            <div class="project-hero">
+                <div class="project-hero-image">
+                    <img src="images/job-tracker.png" alt="Job Application Tracker">
+                </div>
+                <div class="project-hero-details">
+                    <h1 class="project-title">Job Application Tracker</h1>
+                    <p class="project-desc">
+                        A productivity tool designed to help developers and job seekers keep track of their
+                        applications. It features a dashboard with status tracking, reminders, and historical data.
+                    </p>
+                    <div class="project-purpose">
+                        <h3>Project Purpose</h3>
+                        <p>
+                            To solve the problem of organization during a busy job search period. This app allows
+                            users to see exactly where they stand with each application at a glance.
+                        </p>
+                    </div>
+
+                    <div class="project-stack">
+                        <h3>Tech Stack</h3>
+                        <div class="stack-badges">
+                            <span class="badge"><img src="images/flutter.png" alt="Flutter"> Flutter</span>
+                            <span class="badge"><img src="images/django.png" alt="Django"> Django</span>
+                            <span class="badge"><i class="fa-brands fa-python"></i> Python</span>
+                            <span class="badge"><i class="fa-solid fa-database"></i> SQLite</span>
+                        </div>
+                    </div>
+
+                    <div class="project-actions">
+                        <a href="https://github.com/yourusername/project1" target="_blank" class="btn primary-btn"><i
+                                class="fa-brands fa-github"></i> View Code</a>
+                        <a href="https://your-live-demo-link.netlify.app" target="_blank" class="btn secondary-btn"><i
+                                class="fa-solid fa-rocket"></i> Live Demo</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video Section -->
+            <div class="project-video-section">
+                <h2 class="section-title">Project Walkthrough</h2>
+                <div class="video-container">
+                    <video controls>
+                        <source src="videos/ecommerce.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2026 Bigyan Shrestha. All rights reserved.</p>
+                </div>
+
+                <div class="footer-socials">
+                    <a href="mailto:shresthabigyan63@gmail.com" aria-label="Email" data-tooltip="Email"><i
+                            class="fa-solid fa-envelope"></i></a>
+                    <a href="#" aria-label="LinkedIn" data-tooltip="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#" aria-label="GitHub" data-tooltip="GitHub"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="custom-cursor"></div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

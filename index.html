@@ -24,7 +24,7 @@
 
     <!-- Navbar -->
     <header class="navbar">
-        <div class="logo">BIGYAN.</div>
+        <div class="logo"><a href="#">BIGYAN.</a></div>
         <div class="navbar-right">
             <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">
                 <i class="fa-solid fa-moon"></i>
@@ -64,70 +64,67 @@
         </div>
     </section>
 
-    <!-- About & Skills Section -->
-    <section id="about" class="section about-skills">
-        <div class="container">
-            <div class="about-skills-wrapper">
-                <!-- Row 1: Headers -->
-                <div class="about-header reveal reveal-left">
-                    <div class="about-image">
-                        <img src="images/profile.jpg" alt="Profile Picture"
-                            onerror="this.src='https://placehold.co/150x150/424769/ffffff?text=Profile'">
-                    </div>
+    <!-- About Me Section -->
+    <section id="about" class="section about-new">
+        <div class="container marquee-container">
+            <div class="about-grid">
+                <!-- Top Row -->
+                <div class="about-card-large reveal reveal-left">
                     <h2 class="section-title left-align">About Me</h2>
+                    <p>
+                        I’m a passionate student developer learning Flutter, Django, and Python, along with core web
+                        technologies like HTML, CSS, and JavaScript. I enjoy building simple, functional projects
+                        and turning ideas into real applications through code.
+                    </p>
+                    <p>
+                        I’m always curious to learn new technologies, improve my problem-solving skills, and grow
+                        step by step as a developer.
+                    </p>
+                    <blockquote class="about-quote">"Always learning, always building."</blockquote>
                 </div>
 
-                <div class="skills-header reveal reveal-right">
-                    <h2 class="section-title left-align">Technologies I Use</h2>
-                </div>
-
-                <!-- Row 2: Content -->
-                <div class="about-text-column reveal reveal-left">
-                    <div class="about-text">
-                        <p>
-                            I’m a passionate student developer learning Flutter, Django, and Python, along with core web
-                            technologies like HTML, CSS, and JavaScript. I enjoy building simple, functional projects
-                            and turning ideas into real applications through code.
-                            I’m always curious to learn new technologies, improve my problem-solving skills, and grow
-                            step by step as a developer.
-                        </p>
-                        <blockquote class="about-quote">"Always learning, always building."</blockquote>
+                <div class="profile-card reveal reveal-right">
+                    <div class="profile-image-container">
+                        <img src="images/profile.jpg" alt="Bigyan Shrestha"
+                            onerror="this.src='https://placehold.co/300x300/424769/ffffff?text=Profile'">
                     </div>
                 </div>
 
-                <div class="skills-column reveal reveal-right">
-                    <div class="skills-grid-compact stagger-container">
-                        <div class="skill-card reveal reveal-up">
-                            <i class="fa-brands fa-html5"></i>
-                            <span class="skill-text">HTML</span>
-                        </div>
-                        <div class="skill-card reveal reveal-up">
-                            <i class="fa-brands fa-css3-alt"></i>
-                            <span class="skill-text">CSS</span>
-                        </div>
-                        <div class="skill-card reveal reveal-up">
-                            <i class="fa-brands fa-js"></i>
-                            <span class="skill-text">JavaScript</span>
-                        </div>
-                        <div class="skill-card reveal reveal-up">
-                            <i class="fa-brands fa-python"></i>
-                            <span class="skill-text">Python</span>
-                        </div>
-                        <div class="skill-card reveal reveal-up">
-                            <img src="images/django.png" alt="Django" class="custom-icon">
-                            <span class="skill-text">Django</span>
-                        </div>
-                        <div class="skill-card reveal reveal-up">
-                            <img src="images/flutter.png" alt="Flutter" class="custom-icon">
-                            <span class="skill-text">Flutter</span>
-                        </div>
-                        <div class="skill-card reveal reveal-up">
-                            <i class="fa-brands fa-git"></i>
-                            <span class="skill-text">Git</span>
-                        </div>
-                        <div class="skill-card reveal reveal-up">
-                            <i class="fa-brands fa-docker"></i>
-                            <span class="skill-text">Docker</span>
+                <!-- Bottom Row -->
+                <div class="stat-card reveal reveal-up">
+                    <div class="stat-content">
+                        <span class="stat-number">10+</span>
+                        <span class="stat-label">Projects Completed</span>
+                    </div>
+                </div>
+
+                <div class="exp-card reveal reveal-up">
+                    <div class="exp-content">
+                        <h3>My Journey</h3>
+                        <p>Self-taught developer with a focus on building impactful mobile and web applications.</p>
+                    </div>
+                </div>
+
+                <div class="marquee-card reveal reveal-up">
+                    <h3>Tech Stack</h3>
+                    <div class="marquee">
+                        <div class="marquee-content">
+                            <!-- Duplicate items for seamless loop -->
+                            <div class="tech-pill"><i class="fa-brands fa-html5"></i> HTML</div>
+                            <div class="tech-pill"><i class="fa-brands fa-css3-alt"></i> CSS</div>
+                            <div class="tech-pill"><i class="fa-brands fa-js"></i> JavaScript</div>
+                            <div class="tech-pill"><i class="fa-brands fa-python"></i> Python</div>
+                            <div class="tech-pill"><img src="images/django.png" alt="Django"> Django</div>
+                            <div class="tech-pill"><img src="images/flutter.png" alt="Flutter"> Flutter</div>
+                            <div class="tech-pill"><i class="fa-brands fa-git-alt"></i> Git</div>
+                            <!-- Duplicates -->
+                            <div class="tech-pill"><i class="fa-brands fa-html5"></i> HTML</div>
+                            <div class="tech-pill"><i class="fa-brands fa-css3-alt"></i> CSS</div>
+                            <div class="tech-pill"><i class="fa-brands fa-js"></i> JavaScript</div>
+                            <div class="tech-pill"><i class="fa-brands fa-python"></i> Python</div>
+                            <div class="tech-pill"><img src="images/django.png" alt="Django"> Django</div>
+                            <div class="tech-pill"><img src="images/flutter.png" alt="Flutter"> Flutter</div>
+                            <div class="tech-pill"><i class="fa-brands fa-git-alt"></i> Git</div>
                         </div>
                     </div>
                 </div>
@@ -158,6 +155,8 @@
         </div>
     </section>
 
+
+
     <!-- Projects Section -->
     <section id="projects" class="section projects">
         <div class="container">
@@ -166,20 +165,11 @@
             <div class="projects-grid">
 
                 <!-- Project 1 -->
-                <div class="project reveal reveal-left">
+                <a href="project-job-tracker.html" class="project reveal reveal-left">
                     <div class="project-image">
                         <img src="images/job-tracker.png" alt="Task Manager App">
-
                         <div class="project-overlay">
-                            <a href="https://your-live-demo-link.netlify.app" target="_blank"
-                                class="project-overlay-btn">
-                                Live Demo
-                            </a>
-
-                            <a href="https://github.com/yourusername/project1" target="_blank"
-                                class="project-overlay-btn outline">
-                                &lt;/&gt; View Code
-                            </a>
+                            <span class="view-project-hint">View Project <i class="fa-solid fa-arrow-right"></i></span>
                         </div>
                     </div>
 
@@ -190,26 +180,16 @@
                         <div class="project-tech">
                             <span class="tech-tag"><img src="images/flutter.png" alt="Flutter"> Flutter</span>
                             <span class="tech-tag"><img src="images/django.png" alt="django"> Django</span>
-
                         </div>
                     </div>
-                </div>
+                </a>
 
                 <!-- Project 2 -->
-                <div class="project reveal reveal-right">
+                <a href="project-ecommerce.html" class="project reveal reveal-right">
                     <div class="project-image">
                         <img src="images/ecommerce-website.png" alt="Portfolio Website">
-
                         <div class="project-overlay">
-                            <a href="https://bigyanshrestha17.github.io/ecommerce_website" target="_blank"
-                                class="project-overlay-btn">
-                                Live Demo
-                            </a>
-
-                            <a href="https://github.com/bigyanshrestha17/ecommerce_website" target="_blank"
-                                class="project-overlay-btn outline">
-                                &lt;/&gt; View Code
-                            </a>
+                            <span class="view-project-hint">View Project <i class="fa-solid fa-arrow-right"></i></span>
                         </div>
                     </div>
 
@@ -223,26 +203,16 @@
                             <span class="tech-tag"><i class="fa-brands fa-bootstrap"></i> HTML</span>
                             <span class="tech-tag"><i class="fa-brands fa-css3-alt"></i> CSS</span>
                             <span class="tech-tag"><i class="fa-brands fa-js"></i> JavaScript</span>
-
                         </div>
                     </div>
-                </div>
+                </a>
 
                 <!-- Project 3 -->
-                <div class="project reveal reveal-left">
+                <a href="project-portfolio.html" class="project reveal reveal-left">
                     <div class="project-image">
                         <img src="images/portfolio.png" alt="Weather App">
-
                         <div class="project-overlay">
-                            <a href="https://bigyanshrestha17.github.io/portfolio_website" target="_blank"
-                                class="project-overlay-btn">
-                                Live Demo
-                            </a>
-
-                            <a href="https://github.com/BigyanShrestha17/portfolio_website" target="_blank"
-                                class="project-overlay-btn outline">
-                                &lt;/&gt; View Code
-                            </a>
+                            <span class="view-project-hint">View Project <i class="fa-solid fa-arrow-right"></i></span>
                         </div>
                     </div>
 
@@ -255,11 +225,14 @@
                             <span class="tech-tag"><i class="fa-brands fa-js"></i> JavaScript</span>
                         </div>
                     </div>
-                </div>
+                </a>
 
             </div>
         </div>
     </section>
+
+    <!--Project 4 -->
+
 
     <!-- Contact Section -->
     <section id="contact" class="section contact">
