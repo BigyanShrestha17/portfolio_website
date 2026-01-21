@@ -509,7 +509,7 @@ body.light-mode .theme-btn .fa-sun {
     /* Positioned within the extra marquee padding */
     font-size: 0.85rem;
     font-weight: 600;
-    color: var(--accent-color);
+    color: var(--text-primary);
     opacity: 0;
     transform: translateY(5px);
     transition: var(--transition);
@@ -833,7 +833,7 @@ body.light-mode .theme-btn .fa-sun {
     transform: translateX(-50%) translateY(5px);
     font-size: 0.75rem;
     font-weight: 600;
-    color: var(--accent-color);
+    color: var(--text-primary);
     opacity: 0;
     pointer-events: none;
     transition: var(--transition);
@@ -1039,7 +1039,7 @@ footer {
     transform: translateX(-50%) translateY(5px);
     font-size: 0.75rem;
     font-weight: 600;
-    color: var(--accent-color);
+    color: var(--text-primary);
     opacity: 0;
     pointer-events: none;
     transition: var(--transition);
