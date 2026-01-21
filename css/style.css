@@ -351,6 +351,17 @@ body.light-mode .theme-btn .fa-sun {
     grid-column: span 2;
 }
 
+.about-quote {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: var(--accent-color);
+    margin-top: 25px;
+    padding-left: 20px;
+    border-left: 4px solid var(--accent-color);
+    line-height: 1.5;
+    font-weight: 500;
+}
+
 .profile-card {
     grid-column: span 1;
 }
