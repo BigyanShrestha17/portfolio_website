@@ -427,8 +427,8 @@ body.light-mode .theme-btn .fa-sun {
 }
 
 .stat-label {
-    font-size: 0.9rem;
-    color: var(--text-secondary);
+    font-size: 1.2rem;
+    color: var(--accent-color);
     text-transform: uppercase;
     letter-spacing: 1px;
 }
