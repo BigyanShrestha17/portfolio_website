@@ -72,11 +72,11 @@ loader.load(
 
         model.position.sub(center);
 
-        const scaleFactor = 2.3/ size.y;
+        const scaleFactor = 2.4/ size.y;
         model.scale.setScalar(scaleFactor);
 
         // Move model down (no navbar clash)
-        model.position.y -= 1;
+        model.position.y -= 0.8;
     },
     undefined,
     (err) => console.error(err)
