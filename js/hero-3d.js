@@ -20,6 +20,7 @@ const camera = new THREE.PerspectiveCamera(
 camera.position.set(0, 0, 5);
 
 // --------------------
+// --------------------
 // Renderer (RIGHT SIDE)
 // --------------------
 const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
@@ -32,7 +33,19 @@ renderer.domElement.style.right = '0';
 renderer.domElement.style.width = '50vw';
 renderer.domElement.style.height = '100vh';
 
+// --------------------
+// Visibility Toggle (MOBILE HIDE)
+// --------------------
+function handleVisibility() {
+    if (window.innerWidth < 768) {
+        renderer.domElement.style.display = 'none';
+    } else {
+        renderer.domElement.style.display = 'block';
+    }
+}
+
 document.body.appendChild(renderer.domElement);
+handleVisibility();
 
 // --------------------
 // Controls (FIXED ROTATION)
@@ -72,7 +85,7 @@ loader.load(
 
         model.position.sub(center);
 
-        const scaleFactor = 2.4/ size.y;
+        const scaleFactor = 2.4 / size.y;
         model.scale.setScalar(scaleFactor);
 
         // Move model down (no navbar clash)
@@ -96,7 +109,10 @@ animate();
 // Resize
 // --------------------
 window.addEventListener('resize', () => {
-    camera.aspect = (window.innerWidth * 0.5) / window.innerHeight;
-    camera.updateProjectionMatrix();
-    renderer.setSize(window.innerWidth * 0.5, window.innerHeight);
+    handleVisibility();
+    if (window.innerWidth >= 768) {
+        camera.aspect = (window.innerWidth * 0.5) / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth * 0.5, window.innerHeight);
+    }
 });
