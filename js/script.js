@@ -74,47 +74,4 @@ document.addEventListener('DOMContentLoaded', () => {
         const heroElements = document.querySelectorAll('.hero .reveal');
         heroElements.forEach(el => el.classList.add('active'));
     }, 100);
-    // Custom Cursor Logic
-    const cursor = document.getElementById('custom-cursor');
-
-    // Only activate on desktop (touch devices don't need distinct cursors)
-    if (cursor && window.matchMedia("(pointer: fine)").matches) {
-
-        // 1. Follow Mouse
-        document.addEventListener('mousemove', (e) => {
-            cursor.style.left = e.clientX + 'px';
-            cursor.style.top = e.clientY + 'px';
-
-            // 2. Detect Hover over Interactive Elements
-            // We check what element is under the cursor
-            // If it's a link, button, or has 'cursor: pointer', we switch
-            const target = e.target;
-
-            // Check if the element OR its parent is interactive
-            const isInteractive = target.matches('a, button, input, textarea, select, label, .btn, .project-overlay, .skill-card, .theme-btn') ||
-                target.closest('a, button, input, textarea, select, label, .btn, .project-overlay, .skill-card, .theme-btn') ||
-                window.getComputedStyle(target).cursor === 'pointer';
-
-            if (isInteractive) {
-                document.body.classList.add('hovering-interactable');
-            } else {
-                document.body.classList.remove('hovering-interactable');
-            }
-        });
-
-        // 3. Hide cursor when leaving the window
-        document.addEventListener('mouseout', (e) => {
-            if (!e.relatedTarget) {
-                cursor.style.display = 'none';
-            }
-        });
-
-        document.addEventListener('mouseover', (e) => {
-            cursor.style.display = 'block';
-        });
-
-    } else {
-        // Hide custom cursor on touch devices to prevent stuck dot
-        if (cursor) cursor.style.display = 'none';
-    }
 });

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ecommerce Website - Bigyan's Portfolio</title>
+    <title>Job Application Tracker - Bigyan's Portfolio</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,14 +17,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body class="project-detail-page">
 
     <!-- Navbar -->
     <header class="navbar">
-        <div class="logo"><a href="index.html">BIGYAN.</a></div>
+        <div class="logo"><a href="/">BIGYAN.</a></div>
         <div class="navbar-right">
             <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">
                 <i class="fa-solid fa-moon"></i>
@@ -32,9 +32,9 @@
             </button>
             <nav>
                 <ul>
-                    <li><a href="index.html#about">About</a></li>
-                    <li><a href="index.html#projects">Projects</a></li>
-                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="/#about">About</a></li>
+                    <li><a href="/#projects">Projects</a></li>
+                    <li><a href="/#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -44,43 +44,43 @@
     <main class="project-detail-main">
         <div class="container">
             <!-- Back Button -->
-            <a href="index.html#projects" class="back-link"><i class="fa-solid fa-arrow-left"></i> Back to Projects</a>
+            <a href="/#projects" class="back-link"><i class="fa-solid fa-arrow-left"></i> Back to Projects</a>
 
             <!-- Top Section: Image + Details -->
             <div class="project-hero">
                 <div class="project-hero-image">
-                    <img src="images/ecommerce-website.png" alt="Ecommerce Website">
+                    <img src="/images/job-tracker.png" alt="Job Application Tracker">
                 </div>
                 <div class="project-hero-details">
-                    <h2 class="project-title">Ecommerce Website</h2>
+                    <h1 class="project-title">Job Application Tracker</h1>
                     <p class="project-desc">
-                        A full-featured e-commerce platform that provides a seamless shopping experience.
-                        It includes product browsing, a functional shopping cart, and a secure checkout process.
+                        A productivity tool designed to help developers and job seekers keep track of their
+                        applications. It features a dashboard with status tracking, reminders, and historical data.
                     </p>
                     <div class="project-purpose">
                         <h3>Project Purpose</h3>
                         <p>
-                            The goal was to build a robust e-commerce solution that handles complex state management
-                            for the shopping cart and integrates a backend for order processing.
+                            To solve the problem of organization during a busy job search period. This app allows
+                            users to see exactly where they stand with each application at a glance.
                         </p>
                     </div>
 
                     <div class="project-stack">
                         <h3>Tech Stack</h3>
                         <div class="stack-badges">
+                            <span class="badge" data-tooltip="Flutter"><img src="/images/flutter.png"
+                                    alt="Flutter"></span>
+                            <span class="badge" data-tooltip="Django"><img src="/images/django.png" alt="Django"></span>
                             <span class="badge" data-tooltip="Python"><i class="fa-brands fa-python"></i></span>
-                            <span class="badge" data-tooltip="Django"><img src="images/django.png" alt="Django"></span>
-                            <span class="badge" data-tooltip="JavaScript"><i class="fa-brands fa-js"></i></span>
-                            <span class="badge" data-tooltip="HTML5"><i class="fa-brands fa-html5"></i></span>
-                            <span class="badge" data-tooltip="CSS3"><i class="fa-brands fa-css3-alt"></i></span>
+                            <span class="badge" data-tooltip="SQLite"><i class="fa-solid fa-database"></i></span>
                         </div>
                     </div>
 
                     <div class="project-actions">
-                        <a href="https://github.com/bigyanshrestha17/ecommerce_website" target="_blank"
-                            class="btn primary-btn"><i class="fa-brands fa-github"></i> View Code</a>
-                        <a href="https://bigyanshrestha17.github.io/ecommerce_website" target="_blank"
-                            class="btn secondary-btn"><i class="fa-solid fa-rocket"></i> Live Demo</a>
+                        <a href="https://github.com/yourusername/project1" target="_blank" class="btn primary-btn"><i
+                                class="fa-brands fa-github"></i> View Code</a>
+                        <a href="https://your-live-demo-link.netlify.app" target="_blank" class="btn secondary-btn"><i
+                                class="fa-solid fa-rocket"></i> Live Demo</a>
                     </div>
                 </div>
             </div>
@@ -90,7 +90,7 @@
                 <h2 class="section-title">Project Walkthrough</h2>
                 <div class="video-container">
                     <video controls>
-                        <source src="videos/ecommerce.mp4" type="video/mp4">
+                        <source src="/videos/ecommerce.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>
@@ -116,8 +116,7 @@
         </div>
     </footer>
 
-    <div id="custom-cursor"></div>
-    <script src="js/script.js"></script>
+    <script src="/js/script.js"></script>
 </body>
 
 </html>

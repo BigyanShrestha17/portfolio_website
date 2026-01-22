@@ -977,11 +977,11 @@ footer {
 .project-hero-details {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 15px;
 }
 
 .project-title {
-    font-size: 3.5rem;
+    font-size: 2rem;
     font-weight: 800;
     color: var(--accent-color);
     margin: 0;
@@ -990,7 +990,7 @@ footer {
 .project-desc {
     font-size: 1.1rem;
     color: var(--text-secondary);
-    margin-bottom: 25px;
+    margin-bottom: 2px;
     line-height: 1.7;
 }
 
@@ -1310,7 +1310,7 @@ footer {
 }
 
 .stagger-container .reveal.active:nth-child(3) {
-    transition-delay: 0.3s;
+    transition-delay: 0.2s;
 }
 
 .stagger-container .reveal.active:nth-child(4) {
@@ -1352,55 +1352,4 @@ footer {
 
 .hero .hero-buttons {
     transition-delay: 1.3s;
-}
-
-/* =========================================
-   CUSTOM CURSOR
-   ========================================= */
-
-/* 1. Hide default cursor on the body (non-active areas) */
-body {
-    cursor: none;
-}
-
-/* 2. The Custom Cursor Element (Small Circle) */
-#custom-cursor {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 12px;
-    height: 12px;
-    background-color: var(--accent-color);
-    /* Orange #f9b17a */
-    border-radius: 50%;
-    pointer-events: none;
-    /* Let clicks pass through */
-    z-index: 9999;
-    transform: translate(-50%, -50%);
-    transition: opacity 0.2s ease, transform 0.1s linear;
-    mix-blend-mode: difference;
-    /* Optional: ensures visibility on light/dark */
-    will-change: left, top;
-}
-
-/* 3. On interactive elements, show the system Hand Pointer and hide custom circle */
-a,
-button,
-.btn,
-input,
-textarea,
-select,
-label,
-.project-overlay,
-.skill-card,
-.theme-btn,
-[role="button"] {
-    cursor: pointer;
-    /* Force system hand cursor */
-}
-
-/* Helper class added by JS when hovering interactive elements */
-body.hovering-interactable #custom-cursor {
-    opacity: 0;
-    /* Hide custom circle */
 }
