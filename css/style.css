@@ -192,8 +192,8 @@ body.light-mode .theme-btn .fa-sun {
 /* Hero */
 .hero {
     min-height: 100vh;
-    padding: 80px 5% 80px 10%;
-    /* 10% left, 5% right */
+    padding: 80px 110px 80px 110px;
+    /* Balanced 5% left and right */
     display: flex;
     align-items: center;
     justify-content: space-between;
