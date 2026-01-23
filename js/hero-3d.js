@@ -102,10 +102,11 @@ loader.load(
         }
     },
     (xhr) => {
-        if (xhr.lengthComputable) {
+        if (xhr.lengthComputable && xhr.total > 0) {
             const percentComplete = Math.round((xhr.loaded / xhr.total) * 100);
+            const clampedPercent = Math.min(percentComplete, 100);
             if (loaderText) {
-                loaderText.textContent = `${percentComplete}%`;
+                loaderText.textContent = `${clampedPercent}%`;
             }
         }
     },
