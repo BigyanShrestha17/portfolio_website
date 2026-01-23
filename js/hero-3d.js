@@ -72,6 +72,8 @@ scene.add(directionalLight);
 // Load Model
 // --------------------
 const loader = new GLTFLoader();
+const loaderElement = document.getElementById('three-loader');
+const loaderText = document.getElementById('loader-text');
 
 loader.load(
     'model/bigyan_model.glb',
@@ -90,9 +92,27 @@ loader.load(
 
         // Move model down (no navbar clash)
         model.position.y -= 0.8;
+
+        // Hide loader
+        if (loaderElement) {
+            loaderElement.classList.add('hidden');
+            setTimeout(() => {
+                loaderElement.style.display = 'none';
+            }, 500);
+        }
     },
-    undefined,
-    (err) => console.error(err)
+    (xhr) => {
+        if (xhr.lengthComputable) {
+            const percentComplete = Math.round((xhr.loaded / xhr.total) * 100);
+            if (loaderText) {
+                loaderText.textContent = `${percentComplete}%`;
+            }
+        }
+    },
+    (err) => {
+        console.error(err);
+        if (loaderElement) loaderElement.style.display = 'none';
+    }
 );
 
 // --------------------
