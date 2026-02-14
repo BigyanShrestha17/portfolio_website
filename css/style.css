@@ -315,6 +315,66 @@ body.light-mode .theme-btn .fa-sun {
     object-fit: contain;
 }
 
+/* Scroll Indicator */
+.scroll-indicator {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10;
+    pointer-events: none;
+    /* transition is removed to allow direct JS mapping for smoothness */
+}
+
+.mouse {
+    width: 25px;
+    height: 42px;
+    border: 2px solid var(--text-secondary);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    opacity: 0.6;
+    transition: var(--transition);
+}
+
+.mouse:hover {
+    opacity: 1;
+    border-color: var(--accent-color);
+}
+
+.wheel {
+    width: 8px;
+    height: 8px;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    margin-top: 8px;
+    animation: scroll-wheel 2s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+}
+
+@keyframes scroll-wheel {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(12px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(12px);
+        opacity: 0;
+    }
+}
+
 /* Social Icons */
 .social-icons {
     display: flex;

@@ -95,6 +95,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
     requestAnimationFrame(raf);
 
+    // Dynamic fade out for scroll indicator
+    const indicator = document.querySelector('.scroll-indicator');
+    if (indicator) {
+        lenis.on('scroll', ({ scroll }) => {
+            // Fade from 1 to 0 between scroll 0 and 150
+            const opacity = Math.max(0, 1 - scroll / 150);
+            indicator.style.opacity = opacity;
+
+            // Optimization: Remove pointer events when invisible
+            if (opacity === 0) {
+                indicator.style.pointerEvents = 'none';
+                indicator.style.visibility = 'hidden';
+            } else {
+                indicator.style.pointerEvents = 'auto';
+                indicator.style.visibility = 'visible';
+            }
+        });
+    }
+
     // Synchronize Lenis with anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
