@@ -502,15 +502,11 @@ body.light-mode .theme-btn .fa-sun {
     transition: var(--transition);
 }
 
-.skill-item i {
-    font-size: 2rem;
-    color: var(--accent-color);
-}
-
 .skill-item img {
-    height: 2rem;
+    height: 2.2rem;
     width: auto;
     object-fit: contain;
+    transition: var(--transition);
 }
 
 .skill-item:hover {
@@ -786,15 +782,11 @@ body.light-mode .theme-btn .fa-sun {
     gap: 5px;
 }
 
-.project-tech-item i {
-    font-size: 1.2rem;
-    color: var(--accent-color);
-}
-
 .project-tech-item img {
     height: 1.2rem;
     width: auto;
     object-fit: contain;
+    align-self: center;
 }
 
 .project-tech-item span {
@@ -811,8 +803,9 @@ body.light-mode .theme-btn .fa-sun {
     font-weight: 700;
     line-height: 1.8;
 }
+
 .projects-grid .project-premium-card .project-title {
-    font-size: 1.2rem !important; 
+    font-size: 1.2rem !important;
 }
 
 .project-description {
@@ -1062,13 +1055,10 @@ footer {
     transition: none;
 }
 
-.stack-badges .badge i {
-    color: var(--accent-color);
-    font-size: 1.8rem;
-}
-
 .stack-badges .badge img {
     height: 28px;
+    width: auto;
+    object-fit: contain;
 }
 
 /* Tooltip for Tech Icons (Details) */
