@@ -94,7 +94,7 @@ ul {
 }
 
 .section {
-    padding: 80px 0;
+    padding: 60px 0;
 }
 
 .section-title {
@@ -779,11 +779,11 @@ body.light-mode .theme-btn .fa-sun {
     transform: scale(1.05);
 }
 
-.project-title,
-.project-description,
-.project-tech-stack,
-.project-actions {
-    padding: 0 20px;
+.project-premium-card .project-title,
+.project-premium-card .project-description,
+.project-premium-card .project-tech-stack,
+.project-premium-card .project-actions {
+    padding: 0 35px;
     /* Consistent internal padding */
 }
 
@@ -791,7 +791,7 @@ body.light-mode .theme-btn .fa-sun {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     padding-bottom: 10px;
 }
 
@@ -809,16 +809,16 @@ body.light-mode .theme-btn .fa-sun {
 }
 
 .project-tech-item span {
-    font-size: 0.8rem;
+    font-size: 0.65rem;
     font-weight: 700;
     color: var(--text-primary);
 }
 
-.project-title {
+.project-premium-card .project-title {
     font-size: 1.5rem;
     font-family: var(--font-heading);
     color: var(--accent-color);
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     font-weight: 700;
     line-height: 1.8;
 }
@@ -835,7 +835,7 @@ body.light-mode .theme-btn .fa-sun {
     flex-grow: 1;
 }
 
-.project-actions {
+.project-premium-card .project-actions {
     display: flex;
     gap: 20px;
 }
@@ -1007,7 +1007,8 @@ footer {
     gap: 0;
     margin: 0 auto 80px auto;
     background-color: var(--card-color);
-    padding: 60px;
+    padding: 80px;
+    /* Increased from 60px for more breathing room */
     border-radius: 40px;
     border: 1px solid var(--border-color);
     box-shadow: 0 40px 100px rgba(0, 0, 0, 0.4);
@@ -1037,13 +1038,15 @@ footer {
 .project-hero-details {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 20px;
     width: 100%;
+    max-width: 900px;
+    /* Inset content slightly for better balance */
     text-align: left;
 }
 
 .project-title {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 800;
     color: var(--accent-color);
     margin: 0;
@@ -1073,11 +1076,11 @@ footer {
 }
 
 .project-purpose {
-    margin-bottom: 25px;
+    margin-bottom: 0;
 }
 
 .project-stack {
-    margin-bottom: 30px;
+    margin-bottom: 0;
 }
 
 .stack-badges {
@@ -1135,8 +1138,6 @@ footer {
     gap: 20px;
     flex-wrap: wrap;
     margin-top: 10px;
-    margin-left: -2px;
-    /* Slight offset to visually align button border with text */
     justify-content: flex-start;
     padding: 0;
 }
