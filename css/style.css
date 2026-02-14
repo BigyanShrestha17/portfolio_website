@@ -431,7 +431,6 @@ body.light-mode .theme-btn .fa-sun {
 
 /* About Premium Redesign */
 .about-premium {
-    padding: 120px 0;
     background-color: var(--bg-color);
 }
 
@@ -444,7 +443,7 @@ body.light-mode .theme-btn .fa-sun {
     display: flex;
     align-items: center;
     gap: 80px;
-    max-width: 1000px;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -477,6 +476,30 @@ body.light-mode .theme-btn .fa-sun {
     font-family: var(--font-heading);
     color: var(--accent-color);
     margin-bottom: 20px;
+}
+
+.technologies-title {
+    font-size: 1.2rem;
+    font-family: var(--font-heading);
+    color: var(--text-primary);
+    margin-bottom: 25px;
+    font-weight: 600;
+    opacity: 0.9;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+}
+
+.technologies-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: var(--accent-color);
+    border-radius: 2px;
 }
 
 .about-bio p {
@@ -557,10 +580,6 @@ body.light-mode .theme-btn .fa-sun {
 }
 
 @media (max-width: 600px) {
-    .about-premium {
-        padding: 80px 0;
-    }
-
     .about-premium-box {
         padding: 40px 20px;
     }
@@ -1245,40 +1264,108 @@ footer {
     }
 }
 
-@media (max-width: 600px) {
-    .navbar nav {
+/* Responsiveness Updates */
+@media (max-width: 1200px) {
+    .container {
+        max-width: 95%;
+    }
+}
+
+@media (max-width: 992px) {
+    .section {
+        padding: 60px 0;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 30px;
+    }
+
+    .edu-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .edu-icon {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px 5%;
+    }
+
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .about-premium-box {
+        padding: 40px 30px;
+        gap: 40px;
+    }
+
+    .about-profile-photo {
+        width: 200px;
+        height: 200px;
+    }
+
+    .three-loader {
         display: none;
-        /* Consider adding a mobile menu later */
     }
 
-    .headline {
-        font-size: 2.8rem;
-        margin-bottom: 20px;
+    .technologies-title {
+        font-size: 1.1rem;
+        text-align: center;
+        display: block;
     }
 
-    .sub-headline {
-        font-size: 1.3rem;
-        margin-bottom: 15px;
+    .technologies-title::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 480px) {
+    .section {
+        padding: 40px 0;
     }
 
-    .role {
-        font-size: 0.9rem;
-        letter-spacing: 1px;
+    .hero-content h1 {
+        font-size: 2.2rem;
     }
 
-    .project-image img {
-        height: 160px;
+    .hero-content p {
+        font-size: 1rem;
     }
 
-    .footer-bottom {
-        flex-direction: column-reverse;
+    .about-skills-grid {
+        grid-template-columns: repeat(3, 1fr);
         gap: 20px;
-        padding: 20px 5%;
     }
 
-    .btn {
-        padding: 10px 20px;
-        font-size: 0.9rem;
+    .skill-item img {
+        height: 1.8rem;
+    }
+
+    .project-premium-card {
+        padding: 25px 20px;
+    }
+
+    .project-title {
+        font-size: 1.3rem;
+    }
+
+    .project-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .project-btn {
+        width: 100%;
     }
 }
 
