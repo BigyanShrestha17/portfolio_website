@@ -779,12 +779,25 @@ body.light-mode .theme-btn .fa-sun {
     transform: scale(1.05);
 }
 
+.project-premium-card .project-category,
 .project-premium-card .project-title,
 .project-premium-card .project-description,
 .project-premium-card .project-tech-stack,
 .project-premium-card .project-actions {
     padding: 0 35px;
-    /* Consistent internal padding */
+    /* Restored original internal padding */
+    width: 100%;
+}
+
+.project-category {
+    color: var(--accent-color);
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    display: block;
+    opacity: 0.9;
 }
 
 .project-tech-stack {
