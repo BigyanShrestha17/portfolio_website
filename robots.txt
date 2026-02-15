@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://bigyan-shrestha.com.np/sitemap.xml
