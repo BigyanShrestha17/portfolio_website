@@ -126,4 +126,66 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // EmailJS Integration
+    const contactForm = document.getElementById('contact-form');
+    const submitBtn = document.getElementById('submit-btn');
+
+    if (contactForm && submitBtn) {
+        // Initialize EmailJS with your Public Key
+        emailjs.init("60ZLajFqaVyMTTDxO");
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            // Show loading state
+            submitBtn.classList.add('loading');
+            submitBtn.disabled = true;
+
+            // Send form using EmailJS
+            emailjs.sendForm('service_435ha4l', 'template_62s2713', contactForm)
+                .then(() => {
+                    // Success
+                    showNotification('Message sent successfully!', 'success');
+                    contactForm.reset();
+                })
+                .catch((error) => {
+                    // Error
+                    console.error('EmailJS Error:', error);
+                    showNotification('Failed to send message. Please try again.', 'error');
+                })
+                .finally(() => {
+                    // Restore button state
+                    submitBtn.classList.remove('loading');
+                    submitBtn.disabled = false;
+                });
+        });
+    }
+
+    // Modern Notification Helper
+    function showNotification(message, type) {
+        // Remove existing notification if any
+        const existing = document.querySelector('.notification');
+        if (existing) existing.remove();
+
+        const notification = document.createElement('div');
+        notification.className = `notification notification-${type}`;
+
+        const icon = type === 'success' ? 'fa-circle-check' : 'fa-circle-exclamation';
+        notification.innerHTML = `
+            <i class="fa-solid ${icon}"></i>
+            <span>${message}</span>
+        `;
+
+        document.body.appendChild(notification);
+
+        // Animate in
+        setTimeout(() => notification.classList.add('show'), 100);
+
+        // Remove after delay
+        setTimeout(() => {
+            notification.classList.remove('show');
+            setTimeout(() => notification.remove(), 400);
+        }, 4000);
+    }
 });
