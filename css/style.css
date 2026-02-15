@@ -1388,6 +1388,20 @@ footer {
         left: 50%;
         transform: translateX(-50%);
     }
+
+    .project-premium-card .project-category,
+    .project-premium-card .project-title,
+    .project-premium-card .project-description {
+        text-align: center;
+    }
+
+    .project-tech-stack {
+        justify-content: center;
+    }
+
+    .project-actions {
+        justify-content: center;
+    }
 }
 
 @media (max-width: 480px) {
