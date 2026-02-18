@@ -73,7 +73,7 @@ scene.add(directionalLight);
 // --------------------
 const loader = new GLTFLoader();
 const loaderElement = document.getElementById('three-loader');
-const loaderText = document.getElementById('loader-text');
+const progressBarFill = document.getElementById('progress-bar-fill');
 
 loader.load(
     'model/bigyan_model.glb',
@@ -105,8 +105,8 @@ loader.load(
         if (xhr.lengthComputable && xhr.total > 0) {
             const percentComplete = Math.round((xhr.loaded / xhr.total) * 100);
             const clampedPercent = Math.min(percentComplete, 100);
-            if (loaderText) {
-                loaderText.textContent = `${clampedPercent}%`;
+            if (progressBarFill) {
+                progressBarFill.style.width = `${clampedPercent}%`;
             }
         }
     },
