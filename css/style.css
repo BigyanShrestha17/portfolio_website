@@ -7,7 +7,7 @@
     --accent-hover: #ffc291;
     --font-heading: 'Space Grotesk', sans-serif;
     --font-body: 'Space Grotesk', sans-serif;
-    --transition: all 0.3s ease;
+    --transition: transform 0.28s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.28s ease, background-color 0.28s ease, color 0.28s ease, border-color 0.28s ease, opacity 0.28s ease;
     --nav-bg: rgba(45, 50, 80, 0.9);
     --border-color: rgba(255, 255, 255, 0.2);
 }
@@ -352,7 +352,11 @@ ul {
     justify-content: center;
     color: var(--text-secondary);
     position: relative;
-    transition: var(--transition);
+    transition: width 0.28s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        border-radius 0.28s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        background-color 0.28s ease,
+        color 0.28s ease,
+        padding 0.28s ease;
     overflow: hidden;
     min-width: 44px;
     /* Ensure sufficient tap target size */
@@ -379,7 +383,7 @@ ul {
     content: attr(data-tooltip);
     opacity: 0;
     white-space: nowrap;
-    transition: var(--transition);
+    transition: opacity 0.28s ease, max-width 0.28s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     max-width: 0;
     display: inline-block;
     overflow: hidden;
@@ -1537,11 +1541,15 @@ footer {
 
 .reveal {
     opacity: 0;
-    transition: all 1.2s cubic-bezier(0.17, 0.55, 0.55, 1);
+    will-change: opacity, transform;
+    transition: opacity 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .reveal.active {
     opacity: 1;
+    will-change: auto;
+    /* release GPU layer after animation */
 }
 
 /* Fade In */
@@ -1560,7 +1568,7 @@ footer {
 
 /* Slide Right (From Left) */
 .reveal-left {
-    transform: translateX(-50px);
+    transform: translateX(-20px);
 }
 
 .reveal-left.active {
@@ -1609,25 +1617,25 @@ footer {
     transition-delay: 0.8s;
 }
 
-/* Hero specific delays */
+/* Hero specific delays — kept short for a snappy entry */
 .hero .headline {
-    transition-delay: 0.1s;
+    transition-delay: 0.05s;
 }
 
 .hero .sub-headline {
-    transition-delay: 0.4s;
+    transition-delay: 0s;
 }
 
 .hero .role {
-    transition-delay: 0.7s;
+    transition-delay: 0.1s;
 }
 
 .hero .social-icons {
-    transition-delay: 1s;
+    transition-delay: 0.2s;
 }
 
 .hero .hero-buttons {
-    transition-delay: 1.3s;
+    transition-delay: 0.3s;
 }
 
 /* 3D Model Loader */

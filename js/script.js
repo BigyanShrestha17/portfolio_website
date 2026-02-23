@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const revealObserver = new IntersectionObserver(revealCallback, {
-        threshold: 0.05 // Trigger when 5% of element is visible
+        threshold: 0.08 // Trigger immediately when ~8% is visible
     });
 
     const revealElements = document.querySelectorAll('.reveal');
@@ -59,15 +59,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize Lenis Smooth Scroll
     const lenis = new Lenis({
-        duration: 1.5,
-        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4ba6
-        direction: 'vertical',
-        gestureDirection: 'vertical',
-        smoothHover: true,
-        smoothTouch: false, // Keep touch natural
+        duration: 1.2,                             // Faster, more responsive feel
+        easing: (t) => 1 - Math.pow(1 - t, 3),    // Pure cubic ease-out: quick start, gentle settle
+        smoothTouch: false,                         // Keep native touch on mobile
         touchMultiplier: 2,
-        infinite: false,
-        lerp: 0.05 // Lower lerp for "heavy" feel
     });
 
     function raf(time) {
