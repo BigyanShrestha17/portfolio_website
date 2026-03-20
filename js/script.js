@@ -4,17 +4,18 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('active');
-                // Once section is revealed, we can stop observing it
-                // observer.unobserve(entry.target); 
+                // Stop watching — animation fires once, no re-triggers on scroll-up
+                observer.unobserve(entry.target);
             }
         });
     };
 
     const revealObserver = new IntersectionObserver(revealCallback, {
-        threshold: 0.08 // Trigger immediately when ~8% is visible
+        threshold: 0.08
     });
 
-    const revealElements = document.querySelectorAll('.reveal');
+    // Only observe non-hero reveal elements (hero activates via setTimeout)
+    const revealElements = document.querySelectorAll('.reveal:not(.hero .reveal)');
     revealElements.forEach(el => revealObserver.observe(el));
 
 
@@ -57,47 +58,32 @@ document.addEventListener('DOMContentLoaded', () => {
         heroElements.forEach(el => el.classList.add('active'));
     }, 100);
 
-    // Initialize Lenis Smooth Scroll
-    const lenis = new Lenis({
-        duration: 1.2,                             // Faster, more responsive feel
-        easing: (t) => 1 - Math.pow(1 - t, 3),    // Pure cubic ease-out: quick start, gentle settle
-        smoothTouch: false,                         // Keep native touch on mobile
-        touchMultiplier: 2,
-    });
-
-    function raf(time) {
-        lenis.raf(time);
-        requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-
-    // Dynamic fade out for scroll indicator
+    // Scroll indicator fade-out — passive, removed once fully hidden
     const indicator = document.querySelector('.scroll-indicator');
     if (indicator) {
-        lenis.on('scroll', ({ scroll }) => {
-            // Fade from 1 to 0 between scroll 0 and 150
-            const opacity = Math.max(0, 1 - scroll / 150);
+        const onScroll = () => {
+            const opacity = Math.max(0, 1 - window.scrollY / 150);
             indicator.style.opacity = opacity;
-
-            // Optimization: Remove pointer events when invisible
             if (opacity === 0) {
                 indicator.style.pointerEvents = 'none';
                 indicator.style.visibility = 'hidden';
+                // No need to keep listening once permanently hidden
+                window.removeEventListener('scroll', onScroll);
             } else {
                 indicator.style.pointerEvents = 'auto';
                 indicator.style.visibility = 'visible';
             }
-        });
+        };
+        window.addEventListener('scroll', onScroll, { passive: true });
     }
 
-    // Synchronize Lenis with anchor links
+    // Smooth anchor scrolling (native)
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const target = document.querySelector(this.getAttribute('href'));
             if (target) {
-                lenis.scrollTo(target);
+                target.scrollIntoView({ behavior: 'smooth' });
             }
         });
     });
