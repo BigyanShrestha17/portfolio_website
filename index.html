@@ -74,25 +74,28 @@
 
 <body>
 
-    <!-- Navbar -->
+        <!-- Navbar -->
     <header class="navbar">
         <div class="logo"><a href="/"><img src="/images/nav-logo.png" alt="Logo"></a></div>
         <div class="navbar-right">
             <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#education" class="nav-link">Education</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
+
     <!-- Hero Section -->
 
     <section class="hero">
         <div class="hero-content">
-            <h2 class="sub-headline">Hello, <span id="typing-span" class="typing-cursor"></span></h2>
+            <h2 class="sub-headline">Hello,
             <h1 class="headline reveal reveal-left">I'M <span class="accent-text">BIGYAN</span></h1>
             <p class="role reveal reveal-left">App Development Enthusiast</p>
             <div class="internship-badge reveal reveal-left">
@@ -109,7 +112,8 @@
             </div>
 
             <div class="hero-buttons reveal reveal-left">
-                <a href="#projects" class="btn primary-btn">View My Projects</a>
+                <a href="#projects" class="btn primary-btn">View My Work <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="bigyan-resume.pdf" class="btn secondary-btn" download>Download Resume <i class="fa-solid fa-download"></i></a>
             </div>
         </div>
 
@@ -192,7 +196,7 @@
                         <span class="edu-year">Present – 2030</span>
                         <h3>Bachelor of Engineering in Information Technology</h3>
                         <p class="institute">Turku University of Applied Sciences</p>
-                        <p class="location">Turku, Finland</p>
+                        <p class="location"><i class="fa-solid fa-location-dot"></i>Turku, Finland</p>
                     </div>
                 </div>
 
@@ -205,7 +209,7 @@
                         <span class="edu-year">2023 – 2025</span>
                         <h3>Higher Secondary Education (NEB)</h3>
                         <p class="institute">V.S. Niketan High School</p>
-                        <p class="location">Kathmandu, Nepal</p>
+                        <p class="location"><i class="fa-solid fa-location-dot"></i>Kathmandu, Nepal</p>
                     </div>
                 </div>
 
@@ -218,188 +222,157 @@
 
     <!-- Projects Section -->
     <section id="projects" class="section projects">
-        <div class="container">
-            <h2 class="section-title">My Projects</h2>
+        <div class="container text-center">
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="section-subtitle">A showcase of my recent work in web and mobile development.</p>
 
             <div class="projects-grid">
-
                 <!-- Project 1 -->
-                <div class="project-premium-card reveal reveal-up">
-                    <a href="/job-tracker/" class="project-image-link">
-                        <img src="/images/job-tracker.png" alt="Job Application Tracker App Interface Preview"
-                            loading="lazy">
-                    </a>
-
-
-
-                    <span class="project-category">Mobile & Web App</span>
-                    <h3 class="project-title">Job Application Tracker</h3>
-                    <p class="project-description">A comprehensive Job Application Tracker app built with Django and
-                        Flutter, featuring automated status tracking and reminders.</p>
-                    <div class="project-tech-stack">
-                        <div class="project-tech-item"><img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg"
-                                alt="Flutter" />
-                            <span>Flutter</span>
-                        </div>
-                        <div class="project-tech-item"><img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain-wordmark.svg"
-                                alt="Django" /> <span>Django</span>
-                        </div>
-                        <div class="project-tech-item"><img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
-                                alt="Python" /> <span>Python</span>
+                <div class="project-card reveal reveal-up">
+                    <div class="project-card-image">
+                        <img src="/images/job-tracker.png" alt="Job Application Tracker" loading="lazy">
+                        <div class="project-card-overlay">
+                            <a href="/job-tracker/" class="btn secondary-btn">View Details</a>
                         </div>
                     </div>
-                    <div class="project-actions">
-                        <a href="/job-tracker/" class="btn project-btn primary-btn">
-                            Explore Project <i class="fa-solid fa-arrow-right"></i>
-                        </a>
+                    <div class="project-card-content">
+                        <span class="project-tag">Mobile & Web</span>
+                        <h3 class="project-title">Job Application Tracker</h3>
+                        <p class="project-description">A comprehensive tool built with Django and Flutter to help users manage their career search with automated tracking.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">Django</span>
+                            <span class="tech-tag">Python</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="/job-tracker/" class="btn primary-btn">Live Demo <i class="fa-solid fa-external-link"></i></a>
+                            <a href="https://github.com/BigyanShrestha17" target="_blank" class="btn secondary-btn"><i class="fa-brands fa-github"></i> Source</a>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Project 2 -->
-                <div class="project-premium-card reveal reveal-up">
-                    <a href="/ecommerce-website/" class="project-image-link">
-                        <img src="/images/ecommerce-website.png" alt="Full Stack Ecommerce Website Project Preview"
-                            loading="lazy">
-                    </a>
-
-                    <span class="project-category">Full Stack Project</span>
-                    <h3 class="project-title">Ecommerce Website</h3>
-                    <p class="project-description">A full-featured e-commerce platform where users can browse products,
-                        manage a shopping cart, and perform secure checkouts.</p>
-
-                    <div class="project-tech-stack">
-                        <div class="project-tech-item"><img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
-                                alt="HTML5" /> <span>HTML5</span>
+                <div class="project-card reveal reveal-up">
+                    <div class="project-card-image">
+                        <img src="/images/ecommerce-website.png" alt="Ecommerce Website" loading="lazy">
+                        <div class="project-card-overlay">
+                            <a href="/ecommerce-website/" class="btn secondary-btn">View Details</a>
                         </div>
-                        <div class="project-tech-item"><img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
-                                alt="CSS3" /> <span>CSS3</span>
-                        </div>
-                        <div class="project-tech-item"><img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
-                                alt="JavaScript" />
-                            <span>JavaScript</span>
-                        </div>
-                        <div class="project-tech-item"><img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain-wordmark.svg"
-                                alt="Django" /> <span>Django</span>
-                        </div>
-                        <div class="project-tech-item"><img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
-                                alt="Python" /> <span>Python</span>
-                        </div>
-
-
                     </div>
-                    <div class="project-actions">
-                        <a href="/ecommerce-website/" class="btn project-btn primary-btn">
-                            Explore Project <i class="fa-solid fa-arrow-right"></i>
-                        </a>
+                    <div class="project-card-content">
+                        <span class="project-tag">Full Stack</span>
+                        <h3 class="project-title">Modern Ecommerce</h3>
+                        <p class="project-description">A full-featured e-commerce platform featuring product management, secure checkout, and a responsive shopping experience.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Django</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">CSS3</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="/ecommerce-website/" class="btn primary-btn">Live Demo <i class="fa-solid fa-external-link"></i></a>
+                            <a href="https://github.com/BigyanShrestha17" target="_blank" class="btn secondary-btn"><i class="fa-brands fa-github"></i> Source</a>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Project 3 -->
-                <div class="project-premium-card reveal reveal-up">
-                    <a href="/portfolio/" class="project-image-link">
-                        <img src="/images/portfolio.png" alt="Professional Portfolio Website Design Preview"
-                            loading="lazy">
-                    </a>
-
-                    <span class="project-category">Frontend Web App</span>
-                    <h3 class="project-title">Portfolio Website</h3>
-                    <p class="project-description">Personal portfolio website showcasing my skills, projects, and
-                        educational background with premium scroll effects.</p>
-
-                    <div class="project-tech-stack">
-                        <div class="project-tech-item"><img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
-                                alt="HTML5" /> <span>HTML5</span>
-                        </div>
-                        <div class="project-tech-item"><img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
-                                alt="CSS3" /> <span>CSS3</span>
-                        </div>
-                        <div class="project-tech-item"><img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
-                                alt="JavaScript" />
-                            <span>JavaScript</span>
+                <div class="project-card reveal reveal-up">
+                    <div class="project-card-image">
+                        <img src="/images/portfolio.png" alt="Portfolio Website" loading="lazy">
+                        <div class="project-card-overlay">
+                            <a href="/portfolio/" class="btn secondary-btn">View Details</a>
                         </div>
                     </div>
-                    <div class="project-actions">
-                        <a href="/portfolio/" class="btn project-btn primary-btn">
-                            Explore Project <i class="fa-solid fa-arrow-right"></i>
-                        </a>
+                    <div class="project-card-content">
+                        <span class="project-tag">Frontend</span>
+                        <h3 class="project-title">Personal Portfolio</h3>
+                        <p class="project-description">A high-performance portfolio website built with modern CSS and Three.js to showcase my digital identity and projects.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="/portfolio/" class="btn primary-btn">Live Demo <i class="fa-solid fa-external-link"></i></a>
+                            <a href="https://github.com/BigyanShrestha17" target="_blank" class="btn secondary-btn"><i class="fa-brands fa-github"></i> Source</a>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Project 4 -->
-                <div class="project-premium-card reveal reveal-up">
-                    <a href="/finance-tracker/" class="project-image-link">
-                        <img src="/images/today-only-app.png" alt="Today Only Productivity App Mobile Interface"
-                            loading="lazy">
-                    </a>
-
-                    <span class="project-category">Mobile & Web App</span>
-                    <h3 class="project-title">Today Only App</h3>
-                    <p class="project-description">An opinionated offline task app that only allows planning for today
-                        and resets automatically at midnight for focused productivity.</p>
-                    <div class="project-tech-stack">
-                        <div class="project-tech-item"><img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
-                                alt="Python" /> <span>Python</span>
-                        </div>
-                        <div class="project-tech-item"><img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain-wordmark.svg"
-                                alt="Django" /> <span>Django</span>
-                        </div>
-                        <div class="project-tech-item"><img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
-                                alt="JavaScript" />
-                            <span>JavaScript</span>
+                <div class="project-card reveal reveal-up">
+                    <div class="project-card-image">
+                        <img src="/images/today-only-app.png" alt="Today Only App" loading="lazy">
+                        <div class="project-card-overlay">
+                            <a href="/finance-tracker/" class="btn secondary-btn">View Details</a>
                         </div>
                     </div>
-
-                    <div class="project-actions">
-                        <a href="/finance-tracker/" class="btn project-btn primary-btn">
-                            Explore Project <i class="fa-solid fa-arrow-right"></i>
-                        </a>
+                    <div class="project-card-content">
+                        <span class="project-tag">Productivity</span>
+                        <h3 class="project-title">Today Only App</h3>
+                        <p class="project-description">An opinionated offline task app that resets automatically at midnight for focused daily productivity.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Django</span>
+                            <span class="tech-tag">PWA</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="/finance-tracker/" class="btn primary-btn">Live Demo <i class="fa-solid fa-external-link"></i></a>
+                            <a href="https://github.com/BigyanShrestha17" target="_blank" class="btn secondary-btn"><i class="fa-brands fa-github"></i> Source</a>
+                        </div>
                     </div>
                 </div>
-
             </div>
-        </div>
     </section>
 
-    <!--Project 4 -->
 
-
-    <!-- Contact Section -->
     <section id="contact" class="section contact">
-        <div class="container reveal reveal-up">
-            <h2 class="section-title">Contact</h2>
-            <div class="contact-container">
-                <div class="contact-text">
-                    <p>Have an idea or a project in mind ? Let’s Work Together</p>
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">Let’s build something together. Feel free to reach out for collaborations or just a friendly hello!</p>
+
+            <div class="contact-grid reveal reveal-up">
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>shresthabigyan63@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Kathmandu, Nepal</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/BigyanShrestha17" target="_blank" class="social-icon" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://linkedin.com/in/bigyan-shresthaa/" target="_blank" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="mailto:shresthabigyan63@gmail.com" class="social-icon" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
                 </div>
-                <form id="contact-form" class="contact-form">
-                    <div class="form-group">
-                        <input type="text" name="from_name" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" name="user_email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" id="submit-btn" class="btn primary-btn">
-                        <span class="btn-text">Send Message</span>
-                        <span class="btn-loader hidden"><i class="fas fa-spinner fa-spin"></i></span>
-                    </button>
-                </form>
+
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <input type="text" name="from_name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="user_email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" id="submit-btn" class="btn primary-btn w-100">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-loader hidden"><i class="fa-solid fa-spinner fa-spin"></i></span>
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
@@ -412,14 +385,8 @@
                     <p>&copy; 2026 Bigyan Shrestha. All rights reserved.</p>
                 </div>
 
-                <div class="footer-socials">
-                    <a href="mailto:shresthabigyan63@gmail.com?subject=Hello%20Bigyan" aria-label="Email"
-                        data-tooltip="Email"><i class="fa-solid fa-envelope"></i></a>
-                    <a href="https://www.linkedin.com/in/bigyan-shresthaa/" aria-label="LinkedIn"
-                        data-tooltip="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://github.com/BigyanShrestha17" aria-label="GitHub" data-tooltip="GitHub"><i
-                            class="fa-brands fa-github"></i></a>
-                </div>
+                
+
             </div>
         </div>
     </footer>

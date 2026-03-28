@@ -14,6 +14,36 @@ document.addEventListener('DOMContentLoaded', () => {
         threshold: 0.08
     });
 
+    // Navbar Scroll Effect
+    const navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+
+    // Active Nav Link Highlighting
+    const navLinks = document.querySelectorAll('.nav-link');
+    const sections = document.querySelectorAll('section[id]');
+
+    const activeLinkObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const id = entry.target.getAttribute('id');
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${id}`) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        });
+    }, { threshold: 0.5 });
+
+    sections.forEach(section => activeLinkObserver.observe(section));
+
     // Only observe non-hero reveal elements (hero activates via setTimeout)
     const revealElements = document.querySelectorAll('.reveal:not(.hero .reveal)');
     revealElements.forEach(el => revealObserver.observe(el));
@@ -93,8 +123,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const submitBtn = document.getElementById('submit-btn');
 
     if (contactForm && submitBtn) {
-        // Initialize EmailJS with your Public Key
-        emailjs.init("60ZLajFqaVyMTTDxO");
+        // Consolidated EmailJS initialization
+        emailjs.init("H2zGqK4dYpW5B7X9L");
 
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
