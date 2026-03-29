@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Active Nav Link Highlighting
     const navLinks = document.querySelectorAll('.nav-link');
     const sections = document.querySelectorAll('section[id]');
+    const heroSection = document.querySelector('.hero');
 
     const activeLinkObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -40,47 +41,26 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             }
         });
-    }, { threshold: 0.5 });
+    }, { 
+        threshold: 0.2, // Lower threshold for better sensitivity
+        rootMargin: "-20% 0px -70% 0px" // Focus on the top-middle part of the viewport
+    });
 
     sections.forEach(section => activeLinkObserver.observe(section));
+
+    // Clear active state when in hero section
+    const heroObserver = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting) {
+            navLinks.forEach(link => link.classList.remove('active'));
+        }
+    }, { threshold: 0.1 });
+
+    if (heroSection) heroObserver.observe(heroSection);
 
     // Only observe non-hero reveal elements (hero activates via setTimeout)
     const revealElements = document.querySelectorAll('.reveal:not(.hero .reveal)');
     revealElements.forEach(el => revealObserver.observe(el));
 
-
-    // Typewriter Effect Logic
-    const typingSpan = document.getElementById('typing-span');
-    if (typingSpan) {
-        const textToType = "World!";
-        let isDeleting = false;
-        let textIndex = 0;
-        let typeSpeed = 150;
-
-        function type() {
-            const currentText = textToType.substring(0, textIndex);
-            typingSpan.textContent = currentText;
-
-            if (!isDeleting && textIndex < textToType.length) {
-                textIndex++;
-                typeSpeed = 150;
-            } else if (isDeleting && textIndex > 0) {
-                textIndex--;
-                typeSpeed = 100;
-            } else if (!isDeleting && textIndex === textToType.length) {
-                isDeleting = true;
-                typeSpeed = 2000; // Wait before deleting
-            } else if (isDeleting && textIndex === 0) {
-                isDeleting = false;
-                typeSpeed = 500; // Wait before starting again
-            }
-
-            setTimeout(type, typeSpeed);
-        }
-
-        // Start typing after a short delay
-        setTimeout(type, 1000);
-    }
 
     // Special handling for Hero section animations
     setTimeout(() => {
