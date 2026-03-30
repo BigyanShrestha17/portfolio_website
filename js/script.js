@@ -57,16 +57,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (heroSection) heroObserver.observe(heroSection);
 
-    // Hide 3D loader when hero is scrolled out of view
+    // Optimized 3D loader visibility (Perfectly fixed while Hero is present)
     const loader = document.getElementById('three-loader');
     if (loader) {
         const loaderObserver = new IntersectionObserver((entries) => {
-            if (entries[0].isIntersecting) {
+            const [entry] = entries;
+            if (entry.isIntersecting) {
                 loader.classList.remove('out-of-view');
             } else {
                 loader.classList.add('out-of-view');
             }
-        }, { threshold: 0.1 });
+        }, { 
+            threshold: 0 // Hide ONLY when perfectly out of view
+        });
 
         if (heroSection) loaderObserver.observe(heroSection);
     }

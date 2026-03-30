@@ -1695,6 +1695,8 @@ footer {
     opacity: 1;
     transition: opacity 0.6s ease;
     pointer-events: none;
+    will-change: opacity;
+    transform: none !important; /* Lock position completely */
 }
 
 /* Hide loader when done or out of view */
@@ -1702,6 +1704,7 @@ footer {
 .three-loader.out-of-view {
     opacity: 0;
     visibility: hidden;
+    transform: none !important;
 }
 
 /* Label above the bar */
