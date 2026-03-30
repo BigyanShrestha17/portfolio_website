@@ -1683,35 +1683,31 @@ footer {
 /* 3D Model Loader */
 .three-loader {
     position: fixed;
-    top: 46%;
-    right: 0;
+    top: 45%;                       /* true vertical center */
+    left: 0;                      /* true horizontal center */
+    transform: translate(97%, 97%); /* center perfectly in viewport */
     width: 50vw;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    padding-top: 0;
-    z-index: 10;
+    justify-content: flex-start;    /* your content layout stays */
+    z-index: 9999;
     opacity: 1;
     transition: opacity 0.6s ease;
     pointer-events: none;
     will-change: opacity;
-    transform: none !important; /* Lock position completely */
 }
 
-/* Hide loader when done or out of view */
 .three-loader.hidden,
 .three-loader.out-of-view {
     opacity: 0;
     visibility: hidden;
-    transform: none !important;
 }
-
 /* Label above the bar */
 .loader-label {
     font-family: var(--font-heading);
     font-size: 0.65rem;
-    font-weight: 500;
+    font-weight: 800;
     letter-spacing: 0.2em;
     color: var(--text-secondary);
     text-transform: uppercase;
