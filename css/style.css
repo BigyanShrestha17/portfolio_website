@@ -1697,8 +1697,9 @@ footer {
     pointer-events: none;
 }
 
-/* Hide loader when done */
-.three-loader.hidden {
+/* Hide loader when done or out of view */
+.three-loader.hidden,
+.three-loader.out-of-view {
     opacity: 0;
     visibility: hidden;
 }

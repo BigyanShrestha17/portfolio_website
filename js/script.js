@@ -57,6 +57,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (heroSection) heroObserver.observe(heroSection);
 
+    // Hide 3D loader when hero is scrolled out of view
+    const loader = document.getElementById('three-loader');
+    if (loader) {
+        const loaderObserver = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting) {
+                loader.classList.remove('out-of-view');
+            } else {
+                loader.classList.add('out-of-view');
+            }
+        }, { threshold: 0.1 });
+
+        if (heroSection) loaderObserver.observe(heroSection);
+    }
+
     // Only observe non-hero reveal elements (hero activates via setTimeout)
     const revealElements = document.querySelectorAll('.reveal:not(.hero .reveal)');
     revealElements.forEach(el => revealObserver.observe(el));
